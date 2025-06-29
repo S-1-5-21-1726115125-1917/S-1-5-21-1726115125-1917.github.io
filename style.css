@@ -54,6 +54,7 @@
         */
         background-image: url("background-dark.jpg"); /*这张图是从https://www.bilibili.com/video/BV1GS411P78n
         下载的*/
+        background-color: #000000;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -95,7 +96,7 @@
         transform: translateY(10px);
     }
 }
-#discus {
+.discus {
     transform: translateY(20px);
     width: 60%;
 }
