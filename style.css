@@ -1,7 +1,7 @@
 /* 字体 */
 @font-face {
     font-family: "Unifont";
-    src: url("\\unifont.otf");
+    src: url("/unifont.otf");
 }
 
 /* 公共样式 */
@@ -42,7 +42,7 @@ html {
 /* 亮色模式 */
 @media (prefers-color-scheme: light) {
     html {
-        background-image: url("\\background.jpg");
+        background-image: url("/background.jpg");
     }
     #title {
         color: #00ffff8f;
@@ -57,7 +57,7 @@ html {
 /* 暗色模式 */
 @media (prefers-color-scheme: dark) {
     html {
-        background-image: url("\\background-dark.jpg");
+        background-image: url("/background-dark.jpg");
     }
     #title {
         color: #00ffff8f;
