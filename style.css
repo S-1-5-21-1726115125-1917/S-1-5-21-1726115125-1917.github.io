@@ -1,104 +1,92 @@
-
-@media (prefers-color-scheme: light) {
-    html {
-        /* 一张背景图像
-        自适应大小，不重复，居中，固定
-        */
-        background-image: url("background.jpg"); /*这张图是从https://www.bilibili.com/video/BV1GS411P78n
-        下载的*/
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-attachment: fixed;
-    }
-    #title {
-        /* 字体 */
-        font-family: "Unifont";
-        /* 字体颜色 */
-        color: #00ffff8f;
-        /* 背景颜色 */
-        background-color: #00000000;
-        /* 边框 */
-        border-radius: 10px;
-        /* 边框后背景处理 */
-        backdrop-filter: blur(5px);
-        /* 文本对齐方式 */
-        text-align: center;
-        /* 行高 */
-        line-height: 1.5;
-        width: 20%;
-        /* 总体居中对齐 */
-        margin: 0 auto;
-    }
-    #content {
-        /* 字体 */
-        color: #000000af;
-        font-family: "Unifont";
-        width: 60%;
-        border-radius: 6px;
-        /* 边框后背景处理 */
-        backdrop-filter: blur(7px);
-        /* 总体居中对齐 */
-        margin: 0 auto;
-        /* 内边距 */
-        padding-left: 14px;
-        padding-right: 14px;
-        padding-bottom: 12px;
-        border: 1px solid #2f2f2f2f;
-        transform: translateY(10px);
-    }
-}
-@media (prefers-color-scheme: dark) {
-    html {
-        /* 一张背景图像
-        自适应大小，不重复，居中，固定
-        */
-        background-image: url("background-dark.jpg"); /*这张图是从https://www.bilibili.com/video/BV1GS411P78n
-        下载的*/
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-attachment: fixed;
-    }
-    #title {
-        /* 字体 */
-        font-family: "Unifont";
-        /* 字体颜色 */
-        color: #00ffff8f;
-        /* 背景颜色 */
-        background-color: #00000000;
-        /* 边框 */
-        border-radius: 10px;
-        /* 边框后背景处理 */
-        backdrop-filter: blur(5px);
-        /* 文本对齐方式 */
-        text-align: center;
-        /* 行高 */
-        line-height: 1.5;
-        width: 20%;
-        /* 总体居中对齐 */
-        margin: 0 auto;
-    }
-    #content {
-        /* 字体 */
-        font-family: "Unifont";
-        color: #ffffffaf;
-        width: 60%;
-        border-radius: 6px;
-        /* 边框后背景处理 */
-        backdrop-filter: blur(7px);
-        /* 总体居中对齐 */
-        margin: 0 auto;
-        /* 内边距 */
-        padding-left: 14px;
-        padding-right: 14px;
-        padding-bottom: 12px;
-        border: 1px solid #9f9f9faf;
-        transform: translateY(10px);
-    }
-}
 /* 字体 */
 @font-face {
     font-family: "Unifont";
-    src: url("unifont.otf");
+    src: url("\unifont.otf");
+}
+
+/* 公共样式 */
+html {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+#title, #content {
+    font-family: "Unifont";
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    margin: 0 auto;
+}
+#title {
+    opacity: 0;
+    transform: translateY(20px);
+    text-align: center;
+    line-height: 1.5;
+    width: 20%;
+    animation: slide-in-title 1.5s forwards;
+}
+#content {
+    width: 60%;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    border-radius: 6px;
+    backdrop-filter: blur(7px);
+    transform: translateY(50px);
+    opacity: 0;
+    animation: slide-in-content 1.5s forwards;
+    animation-delay: 1.1s;
+}
+
+/* 亮色模式 */
+@media (prefers-color-scheme: light) {
+    html {
+        background-image: url("\background.jpg");
+    }
+    #title {
+        color: #00ffff8f;
+        background-color: #00000000;
+    }
+    #content {
+        color: #000000af;
+        border: 1px solid #2f2f2f2f;
+    }
+}
+
+/* 暗色模式 */
+@media (prefers-color-scheme: dark) {
+    html {
+        background-image: url("\background-dark.jpg");
+    }
+    #title {
+        color: #00ffff8f;
+        background-color: #00000000;
+    }
+    #content {
+        color: #ffffffaf;
+        border: 1px solid #9f9f9faf;
+    }
+}
+
+@keyframes slide-in-title {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-in-content {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(10px);
+    }
 }
