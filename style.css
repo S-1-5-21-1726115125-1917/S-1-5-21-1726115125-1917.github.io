@@ -96,10 +96,6 @@
         transform: translateY(10px);
     }
 }
-.giscus {
-    transform: translateY(20px);
-    width: 60%;
-}
 /* 字体 */
 @font-face {
     font-family: "Unifont";
