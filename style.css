@@ -4,7 +4,7 @@
         /* 一张背景图像
         自适应大小，不重复，居中，固定
         */
-        background-image: url("\background.jpg"); /*这张图是从https://www.bilibili.com/video/BV1GS411P78n
+        background-image: url("background.jpg"); /*这张图是从https://www.bilibili.com/video/BV1GS411P78n
         下载的*/
         background-size: cover;
         background-repeat: no-repeat;
@@ -52,7 +52,7 @@
         /* 一张背景图像
         自适应大小，不重复，居中，固定
         */
-        background-image: url("\background-dark.jpg"); /*这张图是从https://www.bilibili.com/video/BV1GS411P78n
+        background-image: url("background-dark.jpg"); /*这张图是从https://www.bilibili.com/video/BV1GS411P78n
         下载的*/
         background-size: cover;
         background-repeat: no-repeat;
@@ -95,8 +95,12 @@
         transform: translateY(10px);
     }
 }
+#discus {
+    transform: translateY(20px);
+    width: 60%;
+}
 /* 字体 */
 @font-face {
     font-family: "Unifont";
-    src: url("\unifont.otf");
+    src: url("unifont.otf");
 }
