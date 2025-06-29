@@ -23,8 +23,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
     New.setAttribute("data-repo-id","R_kgDOPDx95A")
     New.setAttribute("data-category","Announcements")
     New.setAttribute("data-category-id","DIC_kwDOPDx95M4CsM2U")
-    
-    
     New.setAttribute("data-mapping","pathname")
     New.setAttribute("data-strict","0")
     New.setAttribute("data-reactions-enabled","1")
@@ -35,5 +33,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
     New.setAttribute("data-loading","lazy")
     New.setAttribute("crossorigin","anonymous")
     New.async=true
+    New.style.transform="translateY(20px)"
     document.body.appendChild(New)
 });
